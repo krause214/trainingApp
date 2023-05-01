@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trainers</title>
+  <link rel="stylesheet" th:href="@{/css/trainers.css}">
+</head>
+<body>
+<div>
+  <div class="grid-container">
+    <tr th:each="trainer : ${trainerList}">
+      <div>
+        <img class="portrait" th:src="@{/images/{imageName}(imageName=${trainer.imageName})}" th:alt="${trainer.imageName}"/>
+        <a href="url" th:text="|${trainer.name}  ${trainer.surname}|"></a>
+      </div>
+    </tr>
+  </div>
+</div>
+</body>
+</html>

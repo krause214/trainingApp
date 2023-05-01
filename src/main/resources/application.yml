@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: training-web
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/training_web
+    username: postgres
+    password: postgres
+
+server:
+  port: 8080
