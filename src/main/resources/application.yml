@@ -6,6 +6,5 @@ spring:
     url: jdbc:postgresql://localhost:5432/training_web
     username: postgres
     password: postgres
-
 server:
   port: 8080

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new trainer</title>
+</head>
+
+<body>
+  <div>
+    <form th:method="POST" th:action="@{/trainers}" th:object="${trainer}" enctype="multipart/form-data">
+      <label for="name">Имя</label>
+      <input type="text" th:field="*{name}" id="name"/>
+      <br/>
+      <label for="surname">Фамилия</label>
+      <input type="text" th:field="*{surname}" id="surname"/>
+      <br/>
+      <label for="patronymic">Отчество</label>
+      <input type="text" th:field="*{patronymic}" id="patronymic"/>
+      <br/>
+      <label for="description">Описание</label>
+      <input type="text" th:field="*{description}" id="description"/>
+      <br/>
+      <div>
+        <input type="file" name="img" class="form-control-file">
+      </div>
+
+      <button type="submit" value="Создать тренера">Создать тренера</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -24,6 +24,10 @@ public class TrainerService {
         return trainerRepository.findAll();
     }
 
+    public Trainer save(Trainer trainer) {
+        return trainerRepository.save(trainer);
+    }
+
     //todo add trainer
 
     //todo delete trainer
