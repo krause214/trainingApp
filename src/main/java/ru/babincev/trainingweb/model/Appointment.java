@@ -25,19 +25,16 @@ public class Appointment {
     @JoinColumn(name="trainer_id", referencedColumnName = "trainer_id")
     private Trainer trainer;
 
-    @NotNull
     @Column(name="name")
     private String name;
 
-    @NotNull
     @Column(name="surname")
     private String surname;
-
-    @NotNull
-    @Column(name = "patronymic")
-    private String patronymic;
 
     @Column(name = "description")
     private String description;
 
+    public boolean hasPerson(){
+        return (!name.isEmpty() || !surname.isEmpty());
+    }
 }
